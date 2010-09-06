@@ -1,0 +1,13 @@
+*.gitignore
+*.log
+*.tps
+*.aux
+*.swp
+*.bbl
+*.blg
+*.nav
+*.toc
+*.snm
+*.pdf
+*.out
+*.tcp

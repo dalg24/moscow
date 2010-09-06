@@ -1,0 +1,146 @@
+\documentclass[compress]{beamer}
+
+\usepackage[T1]{fontenc} 
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage[section]{placeins} % force à mettre l'image où on veut
+\usepackage{float} %utiliser H pour forcer à mettre l'image où on veut
+\usepackage{lscape} %utilisation du mode paysage
+\usepackage{pslatex}
+\usepackage{multimedia}
+
+\usetheme{Frankfurt}
+
+\setbeamertemplate{footline}{
+\leavevmode%
+\hbox{\hspace*{-0.06cm}
+\begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+	\usebeamerfont{author in head/foot}\insertshortauthor%~~(\insertshortinstitute)
+\end{beamercolorbox}%
+\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+	\usebeamerfont{section in head/foot}\insertshorttitle
+\end{beamercolorbox}%
+\begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+	\usebeamerfont{section in head/foot}\insertshortdate{}\hspace*{2em}
+	\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+\end{beamercolorbox}}%
+\vskip0pt%
+}
+
+\newcommand\bn{\boldsymbol{\nabla}}
+\newcommand\bo{\boldsymbol{\Omega}}
+\newcommand\br{\mathbf{r}}
+\newcommand\la{\left\langle}
+\newcommand\ra{\right\rangle}
+\newcommand\bs{\boldsymbol}
+\newcommand\red{\textcolor{red}}
+
+\renewcommand{\(}{\left(}
+\renewcommand{\)}{\right)}
+\renewcommand{\[}{\left[}
+\renewcommand{\]}{\right]}
+\beamertemplatetransparentcovered
+
+\title{Presentation}
+\author{Damien Lebrun-Grandie \& Bruno Turcksin}\institute{Texas A\&M University, Dept. of Nuclear Engineering}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+\maketitle
+\end{frame}
+%---------------------------------------------------------------------------------------------
+\logo{\includegraphics[height=0.5cm]{../logo_Texas.jpg}}
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents[hideallsubsections]
+\end{frame}
+%---------------------------------------------------------------------------------------------
+\section{Introduction}
+\subsection{Introduction}
+\begin{frame}
+\frametitle{Introduction}
+The projects in the computational method development group (M. Adams, R. McClarren, J. Morel and J. Ragusa) :
+\begin{itemize}
+\item Massively parallel transport calculation (PDT code).
+\item Nuclear reactor analysis and design and reactor core and fuel assembly modeling and optimization.
+\item Radiative transfer of x-rays and radiation hydrodynamics for inertial confinement fusion and high temperature shocks.
+\item Multiphysics (uncertainty quantification and time- and -mesh adaptive high-order coupling techniques).
+\item Spherical harmonics and other moment-based methods for particle transport.
+\item Deterministic method for charged particles transport.
+\item Monte-Carlo methods and hybrid deterministic/Monte-Carlo methods.
+\item Neutron and gamma inverse problems and computed tomography applied to homeland security needs.
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------------------------
+\section{Main projects}
+\subsection{PDT}
+\begin{frame}
+\frametitle{PDT code}
+\begin{itemize}
+\item PDT = Parallel Deterministic Transport
+\item Main project of the group in collaboration with the computer science department (STAPL library).
+\item Massively parallel code ($\sim O\(10^3\)$ to $\sim \(10^4\)$ processors).
+\item Founded by the DOE for the CRASH project (Center for Radiative Shock Hydrodynamics): the goal is to understand radiative shocks and how well we can predict their behavior (uncertainty quantification). Used for the radiative transport part of the project.
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------------------------
+\subsection{Multiphysics}
+\begin{frame}
+\frametitle{Multiphysics} 
+\begin{itemize}
+\item High order methods for the time- and space-discretization of tightly coupled physics (use of JFNK).
+\item Adaptive hp-refinement.
+\item Adjoint non-linear sensitivity analysis.
+\item Uncertainty quantification.
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------------------------
+\subsection{Charged particles}
+\begin{frame}
+\frametitle{Charged particles}
+\begin{itemize}
+\item Application for radiotherapy.
+\item Coupled photon-electron transport.
+\item Use the Boltzmann-CSD equation.
+\item Acceleration scheme for highly anisotropic scattering.
+\item Finite elements in space and energy.
+\item Optimization of the dose.
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------------------------
+\subsection{Inverse problem}
+\begin{frame}
+\frametitle{Inverse problem}
+\begin{itemize}
+\item Application for the homeland security department.
+\item Detection of radioactive material in large containers.
+\item Passive and active detectors.
+\end{itemize}
+\end{frame}
+
+%\frametitle{Introduction}
+%\begin{frame}
+%\begin{itemize}
+%\item Computational Transport Theory.
+%\item Efficiently Massively Parallel Implementation of Modern Deterministic Transport Calculations.
+%\item Nuclear Reactor Analysis and Design.
+%\item Numerical methods for radiative transfer of x-rays.
+%\item Spherical harmonics and other moment-based methods for particle transport.
+%\item Computational radiation hydrodynamics for inertial confinement fusion and high temperature shocks
+%\item Multiphysics simulation of nuclear reactors.
+%\item Uncertainty quantification for multiphysics simulations.
+%\item Discretization techniques and associated multi-level solution techniques for neutral-particle and charged-particle diffusion and transport on unstructured meshes and structured meshes with adaptive refinement.
+%\item Monte Carlo methods and hybrid deterministic/Monte Carlo methods.
+%\item Discretization and solution techniques for multiphysics/multiscale calculations, e.g. radiation-hydrodynamics calculations.
+%\item High performance computing applied to nuclear engineering and science (guaranteed solutions, goal-oriented computations, parallel techniques, and automated mesh refinement applied to multi-group neutron diffusion and transport equations).
+%\item Time-adaptive, high-order accurate multi-physics coupling techniques applied to reactor safety and transient analyses. 
+%\item Reactor core and fuel assembly modeling and optimization for increased performance and geological repository optimization. 
+%\item Neutron and gamma inverse problems and computed tomography applied to homeland security needs.
+%\end{itemize}
+%\end{frame}
+
+\end{document}
